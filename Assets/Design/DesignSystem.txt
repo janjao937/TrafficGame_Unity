@@ -1,0 +1,28 @@
+GameMechanic
+
+=Input
+    -mouse(select traffic light)
+    -keyboard(control traffic light)
+        -q/w/e
+
+=Camera
+    -isomatic topdown
+=car 
+    -Finite state mechine
+
+=traffic Generator(Level Generate)
+    -road
+        -car can drive
+
+=traffic light
+    -state light
+        -green
+        -yellow
+        -red
+
+=game state
+    -menu
+    -start
+    -in game
+    -win
+    -lose

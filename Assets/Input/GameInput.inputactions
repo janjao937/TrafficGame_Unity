@@ -1,0 +1,122 @@
+{
+    "name": "GameInput",
+    "maps": [
+        {
+            "name": "TrafficLight",
+            "id": "49428827-2f96-45ef-a423-d58b30ef2c1d",
+            "actions": [
+                {
+                    "name": "Green",
+                    "type": "Button",
+                    "id": "9ef20030-7c20-4229-80ad-aea4cbabe45f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Red",
+                    "type": "Button",
+                    "id": "e90109a9-c86d-4ccb-8fe7-f10dfb6595b4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeLight",
+                    "type": "Button",
+                    "id": "a4ae53b7-eb6a-44f2-bb2a-db65ad7d42ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b75fc4cd-3ebb-4cd7-b9b0-f04406abb38a",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Green",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "252ad8e8-58c1-40ac-8cf2-91ec669f26d4",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Red",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7b25a868-e043-4172-aaea-91854bd93640",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ObjSelected",
+            "id": "26433131-c8e1-4e5a-9797-1c73db7b89b5",
+            "actions": [
+                {
+                    "name": "Selected",
+                    "type": "Value",
+                    "id": "de9fdef3-7f83-41bd-9477-25f054af24f5",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "a10669f7-e98a-449c-84ed-2a26110c3794",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ce8f7385-dc4d-4638-b9ed-ce758bb29e9f",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selected",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ccb4a4e0-bddd-4217-af63-20c795d4d4a5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
