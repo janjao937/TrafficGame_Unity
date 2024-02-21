@@ -1,23 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Path : MonoBehaviour
 {
-    [SerializeField]private bool isStop = false;
+    [SerializeField]private Path nextPath = default;
+    [SerializeField]private LightType currentLightType = LightType.Green;
     public List<Transform> AllTransfroms = default;
 
-    public void setStop() => isStop = true;
-    public void setStart() => isStop = false;
+    // [SerializeField]private bool isStop = false;
+    // public void setStop() => isStop = true;
+    // public void setStart() => isStop = false;
+    public LightType GetCurrentLightType=>currentLightType;
+    public LightType SetCurrentLightType {set =>currentLightType=value;}
 
-    void OnDrawGizmos()
+    public Path NextPath
+    {
+        get{
+            if(nextPath==null){
+                return null;
+            }
+            return nextPath;
+        }
+    }
+
+    private void OnDrawGizmos()
     {
         if(AllTransfroms.Count<=0)return;
         
-        // foreach(Transform t in allTransfroms){
-        //     Gizmos.DrawWireSphere(t.position,0.5f);
-            
-        // }
         for(int i = 0;i<AllTransfroms.Count;i++){
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(AllTransfroms[i].position,0.5f);

@@ -5,8 +5,8 @@ using UnityEngine;
 public class VehicleGreenState :VehicleBaseState 
 {
     private float yOrigin = 0f;
-    private int indexPath = 0;
-    public VehicleGreenState(Path path,Transform target,Vehicle vehicle):base(path,target,vehicle)
+    // private int indexPath = 0;
+    public VehicleGreenState(int indexPath,Path path,Transform target,Vehicle vehicle):base(indexPath,path,target,vehicle)
     {
         yOrigin = vehicle.transform.position.y;
         lightType= LightType.Green;
@@ -27,21 +27,29 @@ public class VehicleGreenState :VehicleBaseState
 
     protected override VehicleBaseState ChangeToNextState()
     {
-        //yellow
-        return base.ChangeToNextState();
+        //next to yellow
+        return new VehicleYellowState(indexPath,path,target,vehicle);
+        // return base.ChangeToNextState();
     }
 
     private void ChangeTarget()
     {
         if(indexPath<path.AllTransfroms.Count-1){
             indexPath++;
-            target = path.AllTransfroms[indexPath];
-            vehicle.Target = path.AllTransfroms[indexPath];//for view
         }
         else{
             indexPath = 0;
-            target=path.AllTransfroms[indexPath];
-            vehicle.Target=path.AllTransfroms[indexPath];//for view
+            ChangePath();
+        }
+        target=path.AllTransfroms[indexPath];
+        vehicle.Target=path.AllTransfroms[indexPath];//for view
+    }
+
+    private void ChangePath()
+    {
+        if(path.NextPath)
+        {
+            path = path.NextPath;
         }
     }
     

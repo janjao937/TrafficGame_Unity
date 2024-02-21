@@ -9,14 +9,16 @@ public class VehicleBaseState
     protected Vehicle vehicle;
     protected Transform target;
     protected LightType lightType;
+    protected int indexPath = 0;
 
     public LightType LightType{get => lightType;}
 
-    public VehicleBaseState(Path path,Transform target,Vehicle vehicle)
+    public VehicleBaseState(int indexPath,Path path,Transform target,Vehicle vehicle)
     {
         this.path = path;
         this.target = target;
         this.vehicle = vehicle;
+        this.indexPath = indexPath;
         this.lightType = LightType.Base;
     }
     public VehicleBaseState MovementState(LightType currentType){
@@ -40,7 +42,7 @@ public class VehicleBaseState
     }
     protected virtual VehicleBaseState ChangeToNextState()
     {
-        return new VehicleGreenState(path,target,vehicle);
+        return new VehicleGreenState(indexPath,path,target,vehicle);
     }
     protected bool NearTarget()=>Vector3.Distance(vehicle.transform.position,target.transform.position)<=vehicle.StopDistance;
 
