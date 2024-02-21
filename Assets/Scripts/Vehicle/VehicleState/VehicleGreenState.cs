@@ -16,12 +16,6 @@ public class VehicleGreenState :VehicleBaseState
             ChangeTarget();
         }
         MoveTo(target,vehicle.MoveSpeed);
-        //  Vector3 targetDir = (target.position - vehicle.transform.position).normalized;//find unit vector dir
-        // targetDir.y = yOrigin;//reset y dir
-        // Quaternion lookRotation = Quaternion.LookRotation(targetDir,Vector3.up);//find look rotation 
-        // vehicle.transform.rotation = Quaternion.Lerp(vehicle.transform.rotation, lookRotation, Time.deltaTime * vehicle.RotateSpeed);//rotate forward to target
-
-        // vehicle.transform.position += vehicle.transform.forward*vehicle.MoveSpeed*Time.deltaTime;//move forward
     }
 
     protected override VehicleBaseState ChangeToNextState()
