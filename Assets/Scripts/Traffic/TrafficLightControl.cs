@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrafficLightControl : MonoBehaviour
 {
     [SerializeField] private Path ctrlPath;
+    [SerializeField] private LightType currentLight = LightType.Red;
 
     private  void Awake()
     {
@@ -18,6 +19,7 @@ public class TrafficLightControl : MonoBehaviour
     {
         //set next color state
     }
+
 
 
 }

@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &124708951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7057864966608516008, guid: 4e6a943358b7c1f498b798a4d3faae17, type: 3}
+  m_PrefabInstance: {fileID: 7057864966273083322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &124708955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124708951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d8bee590a502b4f97529c406b3f2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightType: 2
+  allLight:
+  - {fileID: 600002387}
+  - {fileID: 244231377}
+  - {fileID: 1598879094}
 --- !u!1 &217462779
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +176,11 @@ Transform:
   m_Father: {fileID: 1669571886}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &244231377 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7057864965986400562, guid: 4e6a943358b7c1f498b798a4d3faae17, type: 3}
+  m_PrefabInstance: {fileID: 7057864966273083322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &253227792
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +212,11 @@ Transform:
   m_Father: {fileID: 1669571886}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &600002387 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7057864965318957086, guid: 4e6a943358b7c1f498b798a4d3faae17, type: 3}
+  m_PrefabInstance: {fileID: 7057864966273083322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &620709898
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,8 +686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd064080c6b662943ae4e491b18d26a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStop: 0
   nextPath: {fileID: 1669571885}
+  currentLightType: 2
   AllTransfroms:
   - {fileID: 652954081}
   - {fileID: 2022371812}
@@ -877,6 +909,11 @@ Transform:
   m_Father: {fileID: 1111162965}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1598879094 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7057864966517359414, guid: 4e6a943358b7c1f498b798a4d3faae17, type: 3}
+  m_PrefabInstance: {fileID: 7057864966273083322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1669571884
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,8 +943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd064080c6b662943ae4e491b18d26a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStop: 0
   nextPath: {fileID: 1111162964}
+  currentLightType: 2
   AllTransfroms:
   - {fileID: 853755111}
   - {fileID: 253227793}

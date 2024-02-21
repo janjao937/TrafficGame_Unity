@@ -8,6 +8,8 @@ public class LightManager : MonoBehaviour
 
     private Dictionary<LightType,MatLightOnOff> matDic = new Dictionary<LightType, MatLightOnOff>();
 
+    public Dictionary<LightType,MatLightOnOff> MatDic => matDic;
+
     private void Awake()
     {
         InsertMatDic();   

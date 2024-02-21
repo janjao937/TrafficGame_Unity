@@ -8,7 +8,7 @@ public class Vehicle : MonoBehaviour
     [Header("Vehicle State")]
     [SerializeField]private LightType currentLightState = LightType.Green;
     public Transform Target = default;
-    [SerializeField] private Path myPath = null;
+    [SerializeField] private Path myPath = null;//firstPathRef
     [SerializeField] private bool stopPath = false;
     [SerializeField] private float stopDistance = 1f;
     

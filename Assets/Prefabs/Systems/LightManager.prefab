@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allMatLightOnOffs:
-  - LightType: 1
+  - LightType: 2
     On: {fileID: 2100000, guid: 255c574ace3e0b94693ec80b43d194af, type: 2}
     Off: {fileID: 2100000, guid: 5f7f4a711eca38747a3ec361fec57032, type: 2}
-  - LightType: 2
+  - LightType: 3
     On: {fileID: 2100000, guid: 33d3839a23d33604295c5f8244192bf8, type: 2}
     Off: {fileID: 2100000, guid: 06aae6c2c5b28e740856fbd388301db2, type: 2}
-  - LightType: 0
+  - LightType: 1
     On: {fileID: 2100000, guid: 5f1734a89353bf84da5a46db2d8091f8, type: 2}
     Off: {fileID: 2100000, guid: c76a8b226a65d6a4d8b2df766af71696, type: 2}
