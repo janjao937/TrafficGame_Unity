@@ -1,10 +1,7 @@
 
 public class RedTrafficState:BaseTrafficState
 {
-    public RedTrafficState():base()
-    {
-
-    }
+    public RedTrafficState():base(){}
 
     protected override void SetLight()
     {
