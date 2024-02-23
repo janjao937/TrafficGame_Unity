@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MatchMeshLight : MonoBehaviour
 {
-    [SerializeField] private LightType lightType = LightType.Red;
+    [SerializeField] private LightType onLightType = LightType.Red;
     [SerializeField] private List<MeshRenderer> allLight = new List<MeshRenderer>();
 
     private Dictionary<LightType,MeshRenderer> dicMesh = new Dictionary<LightType, MeshRenderer>();
@@ -17,15 +17,15 @@ public class MatchMeshLight : MonoBehaviour
 
     private void Start()
     {
-        SetMeshLight();
+        SetMeshLight();//test
     }
-    [ContextMenu("SetMeshLight")]
+    [ContextMenu("SetMeshLight")]//test
     private void SetMeshLight()
     {
         int i = 0;
         foreach(var mat in lightManager.MatDic)
         {
-            if(lightType==mat.Value.LightType){
+            if(onLightType==mat.Value.LightType){
                 allLight[i].material = mat.Value.On;
             }
             else{
@@ -35,10 +35,13 @@ public class MatchMeshLight : MonoBehaviour
         }
     }
 
-    public void SetLight()
+    //for setLight
+    public void SetLight(LightType light)
     {
         //set on selected light
         //set off other
+        this.onLightType = light;
+        SetMeshLight();
     }
     
 
