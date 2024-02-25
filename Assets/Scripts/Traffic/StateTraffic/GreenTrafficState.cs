@@ -8,15 +8,15 @@ public class GreenTrafficState :BaseTrafficState
 
     protected override void SetLight()
     {
-        base.SetLight();
+        base.SetLight();//next to update
     }
     protected override void UpdateState()
     {
-        base.UpdateState();
+        Debug.Log("Green");
     }
     protected override BaseTrafficState ChangeToNextState()
     {
-        return base.ChangeToNextState();
+        return new YellowTrafficState(this.trafficLightControl,this.controlPath);//yellow
     }
 
 

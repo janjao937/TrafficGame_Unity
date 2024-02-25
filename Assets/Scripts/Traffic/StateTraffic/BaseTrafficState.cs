@@ -38,24 +38,12 @@ public class BaseTrafficState
     
     public void InputChangeState()
     {
-        if(canChangeState)stateMode = StateMode.Exit;
+        if(canChangeState)ExitState();
         
     }
 
     protected virtual void SetLight()
     {
-       
-        //Red   
-            //=set Light
-            //=cool down => running
-            //=Running
-                //stay red
-                //cool down&car running => red
-        //Green
-            //=setLight  
-        //Yellow slow
-            //=setLight
-            //=cool down => red
         stateMode = StateMode.Update;
     }
     protected virtual void UpdateState()
@@ -68,8 +56,26 @@ public class BaseTrafficState
         //change state
         return new BaseTrafficState(this.trafficLightControl,this.controlPath);
     }
+    protected void ExitState()
+    {
+        stateMode = StateMode.Exit;
+        canChangeState=false;
+    }
 }
-
+/*
+       
+        Red   
+            =set Light
+            =cool down => running
+            =Running
+                stay red
+                cool down&car running => red
+        Green
+            =setLight  
+        Yellow slow
+            =setLight
+            =cool down => red
+*/
 /*
     
         if(stateMode==StateMode.Enter)

@@ -9,6 +9,12 @@ public class TrafficLightControl : MonoBehaviour
 
     private BaseTrafficState trafficState;
 
+    //==property
+    public float YellowTime = 5;
+    //red time
+    //runningTime
+    //yellow time
+
     private  void Awake()
     {
         if(ctrlPath==null) this.gameObject.SetActive(false);

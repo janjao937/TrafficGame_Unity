@@ -8,15 +8,24 @@ public class YellowTrafficState : BaseTrafficState
 
     protected override void SetLight()
     {
-        base.SetLight();
+        timeCount = trafficLightControl.YellowTime;
+        base.SetLight();//next to update
     }
 
     protected override void UpdateState()
     {
         base.UpdateState();
+        if(timeCount > 0)
+        {
+            timeCount-=Time.deltaTime;
+            Debug.Log("Yellow");
+        }
+        else{
+            ExitState();
+        }
     }
     protected override BaseTrafficState ChangeToNextState()
     {
-        return base.ChangeToNextState();
+        return new RedTrafficState(this.trafficLightControl,this.controlPath);//red
     }
 }
