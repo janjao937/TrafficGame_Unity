@@ -3,17 +3,16 @@ using UnityEngine;
 
 public class RedTrafficState:BaseTrafficState
 {
-
-    private float runningTime = 0;
-    private float redTime = 0;
     private bool isRunning = false;
     public RedTrafficState(TrafficLightControl trafficLightControl,Path controlPath):base(trafficLightControl,controlPath)
     {
-
+        isRunning = false;
     }
 
     protected override void SetLight()
     {
+        ResetTimeCount(isRunning);
+
         base.SetLight();//next to Update
     }
     protected override void UpdateState()
@@ -34,11 +33,11 @@ public class RedTrafficState:BaseTrafficState
     {
         if(isRunning)
         {
-            timeCount = runningTime;
+            timeCount = trafficLightControl.RunningTime;
         }
         else
         {
-            timeCount = redTime;
+            timeCount = trafficLightControl.RedTime;
         }
     }
     private void LoopRed(bool isRunning)
