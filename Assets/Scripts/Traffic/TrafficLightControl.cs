@@ -12,7 +12,7 @@ public class TrafficLightControl : MonoBehaviour
     private  void Awake()
     {
         if(ctrlPath==null) this.gameObject.SetActive(false);
-        trafficState = new RedTrafficState();   
+        trafficState = new RedTrafficState(this,ctrlPath);   
     }
     
     private void Update()

@@ -7,11 +7,15 @@ public class BaseTrafficState
 {
     private StateMode stateMode;
     //==
+    protected TrafficLightControl trafficLightControl;
+    protected Path controlPath;
     protected LightType lightType;
     protected bool canChangeState;
     protected float timeCount = 0;
-    public BaseTrafficState()
+    public BaseTrafficState(TrafficLightControl trafficLightControl,Path controlPath)
     {
+        this.controlPath = controlPath;
+        this.trafficLightControl = trafficLightControl;
         this.stateMode = StateMode.Enter;
         this.canChangeState = true;
     }
@@ -42,16 +46,16 @@ public class BaseTrafficState
     {
        
         //Red   
-            //set Light
-            //cool down => running
-        //Running
-            //stay red
-            //cool down => red
+            //=set Light
+            //=cool down => running
+            //=Running
+                //stay red
+                //cool down&car running => red
         //Green
-            //setLight  
+            //=setLight  
         //Yellow slow
-            //setLight
-            //cool down => red
+            //=setLight
+            //=cool down => red
         stateMode = StateMode.Update;
     }
     protected virtual void UpdateState()
@@ -62,7 +66,7 @@ public class BaseTrafficState
     protected virtual BaseTrafficState ChangeToNextState()
     {
         //change state
-        return new BaseTrafficState();
+        return new BaseTrafficState(this.trafficLightControl,this.controlPath);
     }
 }
 

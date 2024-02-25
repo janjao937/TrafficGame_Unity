@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class YellowTrafficState : BaseTrafficState
 {
-    public YellowTrafficState():base(){}
+    public YellowTrafficState(TrafficLightControl trafficLightControl,Path controlPath):base(trafficLightControl,controlPath){}
 
     protected override void SetLight()
     {

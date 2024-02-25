@@ -4,7 +4,7 @@ using UnityEngine;
 public class RedTrafficState:BaseTrafficState
 {
     protected bool isCarRunning = false;
-    public RedTrafficState():base()
+    public RedTrafficState(TrafficLightControl trafficLightControl,Path controlPath):base(trafficLightControl,controlPath)
     {
         isCarRunning = false;
         timeCount = 5;//runningTime
