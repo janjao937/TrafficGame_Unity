@@ -44,6 +44,7 @@ public class BaseTrafficState
 
     protected virtual void SetLight()
     {
+        trafficLightControl.SetMeshLight.SetLight(this.lightType); //setLight
         stateMode = StateMode.Update;
     }
     protected virtual void UpdateState()

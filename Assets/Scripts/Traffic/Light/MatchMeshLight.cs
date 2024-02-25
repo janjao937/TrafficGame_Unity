@@ -7,7 +7,7 @@ public class MatchMeshLight : MonoBehaviour
     [SerializeField] private LightType onLightType = LightType.Red;
     [SerializeField] private List<MeshRenderer> allLight = new List<MeshRenderer>();
 
-    private Dictionary<LightType,MeshRenderer> dicMesh = new Dictionary<LightType, MeshRenderer>();
+    // private Dictionary<LightType,MeshRenderer> dicMesh = new Dictionary<LightType, MeshRenderer>();
     private LightManager lightManager;
 
     void Awake()

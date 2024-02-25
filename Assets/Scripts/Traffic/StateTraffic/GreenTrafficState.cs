@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GreenTrafficState :BaseTrafficState
 {
-    public GreenTrafficState(TrafficLightControl trafficLightControl,Path controlPath):base(trafficLightControl,controlPath){}
+    public GreenTrafficState(TrafficLightControl trafficLightControl,Path controlPath):base(trafficLightControl,controlPath)
+    {
+        lightType = LightType.Green;
+    }
 
     protected override void SetLight()
     {

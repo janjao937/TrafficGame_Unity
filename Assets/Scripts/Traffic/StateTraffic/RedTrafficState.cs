@@ -6,13 +6,13 @@ public class RedTrafficState:BaseTrafficState
     private bool isRunning = false;
     public RedTrafficState(TrafficLightControl trafficLightControl,Path controlPath):base(trafficLightControl,controlPath)
     {
+        lightType = LightType.Red;
         isRunning = false;
     }
 
     protected override void SetLight()
     {
         ResetTimeCount(isRunning);
-
         base.SetLight();//next to Update
     }
     protected override void UpdateState()

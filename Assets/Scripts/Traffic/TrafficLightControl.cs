@@ -6,6 +6,7 @@ public class TrafficLightControl : MonoBehaviour
 {
     [SerializeField] private Path ctrlPath;
     [SerializeField] private LightType currentLight = LightType.Red;
+    [SerializeField] private MatchMeshLight matchMeshLight;
 
     private BaseTrafficState trafficState;
 
@@ -13,9 +14,8 @@ public class TrafficLightControl : MonoBehaviour
     public float YellowTime = 5;
     public float RedTime = 5;
     public float RunningTime = 5;
-    //red time
-    //runningTime
-    //yellow time
+
+    public MatchMeshLight SetMeshLight =>matchMeshLight;
 
     private  void Awake()
     {
