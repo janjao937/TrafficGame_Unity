@@ -6,9 +6,10 @@ using UnityEngine;
 public class BaseTrafficState 
 {
     private StateMode stateMode;
+    //==
     protected LightType lightType;
     protected bool canChangeState;
-   
+    protected float timeCount = 0;
     public BaseTrafficState()
     {
         this.stateMode = StateMode.Enter;
@@ -42,6 +43,10 @@ public class BaseTrafficState
        
         //Red   
             //set Light
+            //cool down => running
+        //Running
+            //stay red
+            //cool down => red
         //Green
             //setLight  
         //Yellow slow

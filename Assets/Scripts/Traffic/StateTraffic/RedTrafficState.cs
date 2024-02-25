@@ -1,7 +1,14 @@
 
+using UnityEngine;
+
 public class RedTrafficState:BaseTrafficState
 {
-    public RedTrafficState():base(){}
+    protected bool isCarRunning = false;
+    public RedTrafficState():base()
+    {
+        isCarRunning = false;
+        timeCount = 5;//runningTime
+    }
 
     protected override void SetLight()
     {
@@ -9,11 +16,19 @@ public class RedTrafficState:BaseTrafficState
     }
     protected override void UpdateState()
     {
-        base.UpdateState();
+        // base.UpdateState();
+         if(isCarRunning)
+         {
+            Debug.Log("car Stay 5 sec");
+         }
+         else
+         {
+            Debug.Log("change path to green 5 sec");//car running
+         }
     }
 
   
-    protected override BaseTrafficState ChangeToNextState()
+    protected override BaseTrafficState ChangeToNextState()//Green
     {
         return base.ChangeToNextState();
     }
