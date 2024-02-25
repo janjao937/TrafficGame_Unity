@@ -11,6 +11,8 @@ public class TrafficLightControl : MonoBehaviour
 
     //==property
     public float YellowTime = 5;
+    public float RedTime = 5;
+    public float RunningTime = 5;
     //red time
     //runningTime
     //yellow time
